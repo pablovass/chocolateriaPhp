@@ -1,5 +1,4 @@
 <?php 
-session_start();
 
 ?>
        
@@ -31,7 +30,7 @@ session_start();
                     </div>
                   </div>
                   <div class="text-center text-light">
-                    <a href="#" class="text-light">Forgot password?</a>
+                    <a href="#" class="text-light">Olvidaste la  password?</a>
                   </div>
                 </div>
               </div>
