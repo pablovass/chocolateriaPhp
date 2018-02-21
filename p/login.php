@@ -1,9 +1,14 @@
 <?php 
-
+require("logica/logica_login.php");
+session_start();
 ?>
        
         <hr>
-<div class="container panel panel-primary text-center text-bold text-light mt-4x"><p><b>Hola, para poder hacer compras y ver mas productos tenes loguearte o pregistrarte </b></p></div>
+<div class="container panel panel-primary text-center text-bold text-light mt-4x">
+  <p>
+    <b>Hola,<?php echo isset ($_SESSION['name'])?$_SESSION['name']:' para poder hacer compras y ver mas productos tenes loguearte o pregistrarte'; ?>  </b>
+  </p>
+</div>
         <div class="login-page bk-img" >
           <div class="form-content">
             <div class="container">
