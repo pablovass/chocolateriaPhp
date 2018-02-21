@@ -33,7 +33,7 @@
                 <button data-target="#navbar-collapse-02" data-toggle="collapse" class="navbar-toggle" type="button">
                   <span class="sr-only">TABLA DE NAVEGACION </span>
                 </button>
-                <a href="#"  class="navbar-brand brand"> CHOCOLATIN Argentin </a>
+                <a href="#"  class="navbar-brand brand">CHOCOLATIN Argentin </a>
               </div>
               <div id="navbar-collapse-02" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
