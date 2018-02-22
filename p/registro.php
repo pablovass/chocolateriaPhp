@@ -1,3 +1,5 @@
+
+
 <hr>
 <hr>
 <div class="container panel panel-primary text-center text-bold text-light mt-4x"><p><b>Hola, <?php echo isset( $_SESSION['alias'] ) ? $_SESSION['alias'].' ya estas logueado y ya entraste a session! ' : ' Invitado para poder hacer compras y ver mas productos tenes loguearte o pregistrarte '; ?></b></p></div>
@@ -13,25 +15,25 @@
                   <div class="well row pt-2x pb-3x bk-light">
                     <div class="col-md-8 col-md-offset-2">
                       
-                      <form action="page/controlPane.php"  method="post" enctype="multipart/form-data">
+                      <form action="db/new_client.php"  method="post" enctype="multipart/form-data">
                         <label  class="text-uppercase text-sm">Alias</label>
-                        <input name="alias" type="text" placeholder="Alias" class="form-control mb"/>
+                        <input required name="alias" type="text"  placeholder="Alias" class="form-control mb"/>
 
 
                         <label  class="text-uppercase text-sm">Nombre</label>
-                        <input name="nombre" type="text" placeholder="nombre" class="form-control mb"/>
+                        <input required name="nombre" type="text" placeholder="nombre" class="form-control mb"/>
 
                         <label  class="text-uppercase text-sm">Apellido</label>
-                        <input name="apellido" type="text" placeholder="apellido" class="form-control mb"/>
+                        <input required name="apellido" type="text"  placeholder="apellido" class="form-control mb"/>
 
                         <label  class="text-uppercase text-sm">Pais</label>
-                        <input name="pais" type="text" placeholder="Pais" class="form-control mb"/>
+                        <input required name="pais" type="text"  placeholder="Pais" class="form-control mb"/>
 
                         <label  class="text-uppercase text-sm">e-mail</label>
-                        <input name="email" type="text" placeholder="e-mail" class="form-control mb"/>
+                        <input name="email" type="email"   placeholder="e-mail" class="form-control mb"/>
 
                         <label class="text-uppercase text-sm">Password</label>
-                        <input name="password" type="password" placeholder="Password" class="form-control mb"/>
+                        <input  name="password" type="password"  placeholder="Password" class="form-control mb"/>
 
                       
 
@@ -48,4 +50,3 @@
         </div>
         <!-- Load JS here for greater good =============================-->
 
-  
