@@ -1,7 +1,7 @@
  
 <?php  
-session_start();
-
+//session_start();
+$pep="hola como estas";
 
 $totalUser= 0;
 
@@ -44,11 +44,11 @@ $usuarios[]=[
 'password'=> 123,
 'imagen'=> 'http://s29.postimg.org/8v50sgzon/Mario_head.png',
 ];
-
+/*
 for ($i=0; $i < count($usuarios) ; $i++) { 
 
   $totalUser=$i+1;
 }
-
+*/
 
 ?>
