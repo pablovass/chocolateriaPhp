@@ -1,4 +1,22 @@
-<?php /*
+<?php
+
+$target_dir = "uploads/";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["image"]);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+// Check if image file is a actual image or fake image
+if(isset($_POST["submit"])) {
+    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+    if($check !== false) {
+        echo "File is an image - " . $check["mime"] . ".";
+        $uploadOk = 1;
+    } else {
+        echo "File is not an image.";
+        $uploadOk = 0;
+    }
+}
+
+ /*
 
 tengo que hacer el formulario entre en algunos de los sectores 
 que estan en la pagina principal de hay que se grabe se sobre escriba en el array de productos 
@@ -90,7 +108,7 @@ como se hace en el los usuarios
         <li><a href="panel.php?page=1">perfil</a></li>
         <li><a href="panel.php?page=2">Age</a></li>
         <li><a href="panel.php?page=3">Gender</a></li>
-        <li><a href="panel.php?page=4">subir producto</a></li>
+        <li><a data-toggle="collapse" data-target="#demo" >subir producto</a></li>
       </ul>
     </div>
   </div>
@@ -104,7 +122,7 @@ como se hace en el los usuarios
         <li><a href="panel.php?page=1">boton</a></li>
         <li><a href="panel.php?page=2">Age</a></li>
         <li><a href="panel.php?page=3">Gender</a></li>
-        <li><a href="panel.php?page=4">subir producto</a></li>
+        <li><a data-toggle="collapse" data-target="#demo" >subir producto</a></li>
       </ul><br>
     </div>
     <?php 
@@ -121,9 +139,7 @@ como se hace en el los usuarios
                      case 3:
                        include('#');
                        break;
-                       case 4:
-                         include("upload_product.php");
-                         break;
+                      
                          
 
                            }
@@ -187,16 +203,53 @@ como se hace en el los usuarios
           </div>
         </div>
       </div>
+      <!-- para subir productos-->
+
       <div class="row">
+        <div id="demo" class="collapse">
         <div class="col-sm-8">
           <div class="well">
-            <p>Text</p> 
+            <form action="image_list.php" method="post" enctype="multipart/form-data">
+             <div class="form-group">
+              <label>Ingrese nombre del nuevo producto</label>
+              <input type="text" class="form-control" id="comment" required>
+             </div>
+             
+               <div class="form-group">
+                 <label for="comment">Descripcion:</label>
+                <textarea required class="form-control" rows="5" id="comment"></textarea>
+               </div>
+   <div class="large-10 columns">
+                    <button required class="file-upload">            
+                      <input  type="file" class="file-input" name="image">Elegir archivo
+                    </button>
+
+                  </div>
+               
+
+              <button type="submit" class="btn btn-default">Submit</button>
+             <!-- </form> -->
+              </div>
+        </div>
+        
+<div class="col-sm-4">
+
+          <div class="well">
+            <div class="form-group">
+             <label >Precio:</label>
+             <input type="text" class="form-control" id="comment" required>
+              </div>
+            <label for="sel1">Selecciona un categoria:</label>
+      <select required class="form-control" id="sel1">
+        <option>nada</option>
+        <option>chocolate Blanco</option>
+        <option>chocolate Amargo</option>
+        <option>Mix</option>
+      </select> 
+
           </div>
         </div>
-        <div class="col-sm-4">
-          <div class="well">
-            <p>Text</p> 
-          </div>
+</form>
         </div>
       </div>
     </div>
