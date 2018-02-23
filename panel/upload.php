@@ -1,8 +1,40 @@
+
+
 <?php
+// hacer un header klocatios 
+
+
 
 header("Access-Control-Allow-Origin:*");
 header('Access-Control-Allow-Methods','GET,POST,OPTIONS');
 header('Access-Control-Allow-Headers','X-Requested-With,content-type');
+
+
+$nombre=isset($_POST['nombre'])? $_POST['nombre']: '';
+$descripcion=isset($_POST['descripcion'])? $_POST['descripcion']: '';
+$precio=isset($_POST['precio'])? $_POST['precio']: '';
+$categoria=isset($_POST['categoria'])? $_POST['categoria']:'';
+$img_name=isset($_FILES["fileToUpload"]['name'])? $_FILES["fileToUpload"]['name']: '';
+
+//echo "<br> exito";
+
+$page_producto=fopen('../db/productos.php', "a+");
+
+$new_productos="\n".' $productos[]=['."\n".
+                                '"nombre"'.'=>'."'$nombre'".','."\n".
+                                '"descripcion"'.'=>'."'$descripcion'".','."\n".
+                                '"precio"'.'=>'."$precio".','."\n".
+                                '"categoria"'.'=>'."'$categoria'".','."\n".
+                                '"img_name"'.'=>'."'$img_name'".','."\n"
+                 
+                                .']; ';
+
+fwrite($page_producto,$new_productos);
+
+fclose($page_producto);
+
+
+
 /////////
 $target_dir = '../img/product/';
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -41,9 +73,9 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+        echo "The file ". basename( $_FILES["fileToUpload"]["name"]). "ha sido cargado";
     } else {
-        echo "Sorry, there was an error uploading your file.";
+        echo "Lo sentimos, hubo un error al cargar su archivo.";
     }
 }
 ?>

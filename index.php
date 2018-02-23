@@ -1,4 +1,12 @@
+<?php
+/*
+por hacer :
+los redisionamiento del registro 
 
+
+*/
+
+?>
 
 <!DOCTYPE html>
 <html>

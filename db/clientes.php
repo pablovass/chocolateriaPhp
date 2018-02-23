@@ -41,3 +41,12 @@ for ($i=0; $i < count($usuarios) ; $i++) {
 "password"=>'3232',
 "user"=>true,
 ]; 
+ $usuarios[]=[
+"alias"=>'Alex',
+"nombre"=>'alexnandra ',
+"apellido"=>'vas ',
+"pais"=>'Rusia ',
+"email"=>'rusia@gmail.com',
+"password"=>'David1millon',
+"user"=>true,
+]; 
