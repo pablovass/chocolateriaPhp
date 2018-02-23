@@ -1,8 +1,4 @@
-<?php 
-require("logica/logica_login.php");
-session_start();
-?>
-       
+
         <hr>
 <div class="container panel panel-primary text-center text-bold text-light mt-4x">
   <p>
@@ -19,13 +15,13 @@ session_start();
                   <div class="well row pt-2x pb-3x bk-light">
                     <div class="col-md-8 col-md-offset-2">
                       
-                      <form  action="logica/logica_login.php"  method="post" enctype="multipart/form-data">
+                      <form  action="./db/true_login.php"  method="post" enctype="multipart/form-data">
 
                         <label  class="text-uppercase text-sm">e-mail</label>
-                        <input name="email" type="text" placeholder="email" class="form-control mb">
+                        <input name="email" type="email" placeholder="email" class="form-control mb">
 
                         <label class="text-uppercase text-sm">Password</label>
-                        <input name="password"type="password" placeholder="Password" class="form-control mb">
+                        <input required name="password"type="password" placeholder="Password" class="form-control mb">
 
                       
 
