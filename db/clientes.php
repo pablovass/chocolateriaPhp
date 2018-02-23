@@ -8,6 +8,7 @@ $usuarios[]=[
 'email'=> 'naty@gmail.com',
 'password'=> 123,
 'imagen'=> 'http://s29.postimg.org/8v50sgzon/Mario_head.png',
+"user"=>true,
 ];
  
  $usuarios[]=[
@@ -17,6 +18,7 @@ $usuarios[]=[
 "pais"=>'Argentina ',
 "email"=>'una_simple_vida@live.com',
 "password"=>'hombre1986',
+"user"=>false,
 ]; 
 
 
@@ -30,3 +32,12 @@ for ($i=0; $i < count($usuarios) ; $i++) {
  echo "<br>";	
 }
 */
+ $usuarios[]=[
+"alias"=>'roma',
+"nombre"=>'roman21',
+"apellido"=>'valleeee',
+"pais"=>'Arg',
+"email"=>'d@gmail.com',
+"password"=>'3232',
+"user"=>true,
+]; 

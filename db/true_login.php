@@ -15,7 +15,9 @@ for ($i=0; $i < count($usuarios) ; $i++) {
 	 	//echo $usuarios[$i]['password']."<br";
 	header("Location:../panel/panel.php");
 }
-
+//mejorarlo con la funcion header
+echo "error";
+header("Location:../panel/panel.php");
 }
 
 

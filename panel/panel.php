@@ -1,3 +1,11 @@
+<?php /*
+
+tengo que hacer el formulario entre en algunos de los sectores 
+que estan en la pagina principal de hay que se grabe se sobre escriba en el array de productos 
+como se hace en el los usuarios
+
+
+*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,11 +47,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
              <a  class="dropdown-toggle" clas="" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"> Usuario<span class="caret"></span></a>
-             <ul class="dropdown-menu">
-               <li><a href="<?php echo isset($_SESSION['email'])?'page/controlPane.php':'index.php?page=4' ?>">Entrar <span class="fa fa-lock"></span></a></li>
-
-               <li><a href="index.php?page=5">Registrarte</a></li>
-            </ul>
+            
            </li>
          </ul>
        </div><!-- /.navbar-collapse -->
@@ -79,14 +83,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">Logo</a>
+      <a class="navbar-brand" href="#">UsuarioName </a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">perfil</a></li>
-        <li><a href="#">Age</a></li>
-        <li><a href="#">Gender</a></li>
-        <li><a href="#">Geo</a></li>
+        <li><a href="panel.php?page=1">perfil</a></li>
+        <li><a href="panel.php?page=2">Age</a></li>
+        <li><a href="panel.php?page=3">Gender</a></li>
+        <li><a href="panel.php?page=4">subir producto</a></li>
       </ul>
     </div>
   </div>
@@ -95,14 +99,38 @@
 <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-3 sidenav hidden-xs">
-      <h2>Logo</h2>
+      <h2>UsuarioName</h2>
       <ul class="nav nav-pills nav-stacked">
-        <li class="active"><a href="#section1">Dashboard</a></li>
-        <li><a href="#section2">Age</a></li>
-        <li><a href="#section3">Gender</a></li>
-        <li><a href="#section3">Geo</a></li>
+        <li><a href="panel.php?page=1">boton</a></li>
+        <li><a href="panel.php?page=2">Age</a></li>
+        <li><a href="panel.php?page=3">Gender</a></li>
+        <li><a href="panel.php?page=4">subir producto</a></li>
       </ul><br>
     </div>
+    <?php 
+
+
+     $paginado= (isset($_GET['page'])) ? $_GET['page'] : '';
+   switch ($paginado) {
+                 case 1:
+                   include('panel.php');
+                   break;
+                   case 2:
+                     include('#');
+                     break;
+                     case 3:
+                       include('#');
+                       break;
+                       case 4:
+                         include("upload_product.php");
+                         break;
+                         
+
+                           }
+
+
+
+     ?>
     <br>
     <div class="container">
     <div class="col-sm-9">

@@ -11,13 +11,15 @@ $password=isset($_POST['password'])? $_POST['password']: '';
 //echo "<br> exito";
 
 $page_client=fopen('clientes.php', "a+");
+
 $micliente="\n".' $usuarios[]=['."\n".
 								'"alias"'.'=>'."'$alias'".','."\n".
 								'"nombre"'.'=>'."'$nombre'".','."\n".
 								'"apellido"'.'=>'."'$apellido'".','."\n".
 								'"pais"'.'=>'."'$pais'".','."\n".
 								'"email"'.'=>'."'$email'".','."\n".
-								'"password"'.'=>'."'$password'".','."\n"
+								'"password"'.'=>'."'$password'".','."\n".
+                '"user"'.'=>'.'true'.','."\n"
 
 								.']; ';
 
