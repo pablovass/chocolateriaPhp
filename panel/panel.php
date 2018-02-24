@@ -1,6 +1,7 @@
 <?php 
 
 include('../db/productos.php');
+include('../db/clientes.php');
 
  ?>
 <!DOCTYPE html>
@@ -88,6 +89,7 @@ include('../db/productos.php');
         <li><a href="panel.php?page=2">Age</a></li>
         <li><a data-toggle="collapse" data-target="#demo1">listar productos</a></li>
         <li><a data-toggle="collapse" data-target="#demo" >subir producto</a></li>
+        <li><a data-toggle="collapse" data-target="#demo3" >ver Usuario</a></li>
       </ul>
     </div>
   </div>
@@ -102,6 +104,7 @@ include('../db/productos.php');
         <li><a href="panel.php?page=2">Age</a></li>
         <li><a data-toggle="collapse" data-target="#demo1">listar productos</a></li>
         <li><a data-toggle="collapse" data-target="#demo" >subir producto</a></li>
+         <li><a data-toggle="collapse" data-target="#demo3" >ver Usuario</a></li>
       </ul><br>
     </div>
     <?php 
@@ -172,6 +175,8 @@ include('../db/productos.php');
               <th>precio</th>
               <th>categoria</th>
               <th>imagen</th>
+              <th>id</th>
+              <th>cant</th>
             </tr>
             <?php for ($i=0; $i < count($productos); $i++) {?> 
             
@@ -181,6 +186,51 @@ include('../db/productos.php');
               <td>$ <?php echo $productos[$i]['precio'] ?></td>
               <td><?php echo $productos[$i]['categoria'] ?></td>
               <td><img src="../img/product/<?php echo $productos[$i]['img_name'] ?>" alt="" style=" width: 50px; height: 50px;"></td>
+              <td><?php echo $productos[$i]['id']; ?></td>
+              <td><?php echo $productos[$i]['cantidad']; ?></td>
+            </tr>
+            <?php  } ?>
+            
+          </table>
+          </div>
+
+      </div>
+      </div>
+      </div>
+    </div>
+      <!-- para subir productos-->
+
+<!--cientes -->
+ <div id="demo3" class="collapse">
+      <div class="row">
+        <div class="col-sm-12">
+     
+
+
+        <div class="well">
+          <div class="table-responsive ">
+          <table class="table  table-hover  table-bordered ">
+            <tr class="active">
+              <th>alias</th>
+              <th>nombre</th>
+              <th>apellido</th>
+              
+              <th>imagen</th>
+              <th>id</th>
+              <th>compras</th>
+              <th>dinero</th>
+            </tr>
+            <?php for ($i=0; $i < count($usuarios); $i++) {?> 
+            
+            <tr>
+              <td><?php echo $usuarios[$i]['alias'] ?></td>
+              <td><?php echo $usuarios[$i]['nombre'] ?></td>
+              <td><?php echo $usuarios[$i]['apellido'] ?></td>
+              
+              <td><img src="../img/product/<?php //echo $usuarios[$i]['img_name'] ?>" alt="" style=" width: 50px; height: 50px;"></td>
+              <td><?php echo $usuarios[$i]['id']; ?></td>
+              <td><?php echo $usuarios[$i]['compras']; ?></td>
+              <td><?php echo $usuarios[$i]['dinero']; ?></td>
             </tr>
             <?php  } ?>
             

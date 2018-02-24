@@ -16,6 +16,8 @@ $precio=isset($_POST['precio'])? $_POST['precio']: '';
 $categoria=isset($_POST['categoria'])? $_POST['categoria']:'';
 $img_name=isset($_FILES["fileToUpload"]['name'])? $_FILES["fileToUpload"]['name']: '';
 
+$num= rand(0,1000);
+$id=$num.$categoria;
 //echo "<br> exito";
 
 $page_producto=fopen('../db/productos.php', "a+");
@@ -25,7 +27,10 @@ $new_productos="\n".' $productos[]=['."\n".
                                 '"descripcion"'.'=>'."'$descripcion'".','."\n".
                                 '"precio"'.'=>'."$precio".','."\n".
                                 '"categoria"'.'=>'."'$categoria'".','."\n".
-                                '"img_name"'.'=>'."'$img_name'".','."\n"
+                                '"img_name"'.'=>'."'$img_name'".','."\n".
+                                '"cantidad"'.'=>'."100".','."\n".
+                                '"id"'.'=>'."'$id'".','."\n".
+                                '"cantidad"'.'=>'.'100'.','."\n"
                  
                                 .']; ';
 
