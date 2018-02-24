@@ -85,8 +85,8 @@ include('../db/clientes.php');
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li><a href="panel.php?page=1">perfil</a></li>
-        <li><a href="panel.php?page=2">Age</a></li>
+        <li><a href="panel.php?page=1">tu perfil</a></li>
+        <li><a href="panel.php?page=2">Historial de compras</a></li>
         <li><a data-toggle="collapse" data-target="#demo1">listar productos</a></li>
         <li><a data-toggle="collapse" data-target="#demo" >subir producto</a></li>
         <li><a data-toggle="collapse" data-target="#demo3" >ver Usuario</a></li>
@@ -100,8 +100,8 @@ include('../db/clientes.php');
     <div class="col-sm-3 sidenav hidden-xs">
       <h2>UsuarioName</h2>
       <ul class="nav nav-pills nav-stacked">
-        <li><a href="panel.php?page=1">boton</a></li>
-        <li><a href="panel.php?page=2">Age</a></li>
+        <li><a href="panel.php?page=1">tu perfil</a></li>
+        <li><a href="panel.php?page=2">Historial de compras</a></li>
         <li><a data-toggle="collapse" data-target="#demo1">listar productos</a></li>
         <li><a data-toggle="collapse" data-target="#demo" >subir producto</a></li>
          <li><a data-toggle="collapse" data-target="#demo3" >ver Usuario</a></li>
