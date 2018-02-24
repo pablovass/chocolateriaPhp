@@ -34,7 +34,7 @@ require_once('./db/productos.php');
                                 <h4 class="pull-right">$<?php echo $producto['precio'] ?></h4>
                                 <h4><a href="#"><?php echo $producto['nombre'] ?></a>
                                 </h4>
-                                <p> <?php echo $producto['descripcion'] ?><a target="_blank" href="">y muy pocas unidades</a>.</p>
+                                <p> <?php echo $producto['descripcion_corta'] ?><a target="_blank" href="">y muy pocas unidades</a>.</p>
                             </div>
                             <div class="ratings">
                                 <p class="pull-right"><?php echo $producto['categoria'] ?></p>

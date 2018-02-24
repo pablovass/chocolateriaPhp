@@ -113,7 +113,7 @@ include("./db/productos.php");
       <div class="top">
 
         <h2 class="editContent"><?php echo $productos[$i]['nombre'] ?></h2>
-        <a href="detalle_producto.php?detalle=<?php $productos[$i] ?>"><img src="img/product/<?php echo $productos[$i]['img_name'] ?>" alt="" style=" width: 200px; height: 200px;"></a>
+        <a href="./p/detalle_producto.php?detalle=<?php echo  $productos[$i]['id']  ?>"><img src="img/product/<?php echo $productos[$i]['img_name'] ?>" alt="" style=" width: 200px; height: 200px;"></a>
         <p class="price "><b class="editContent">$ <?php echo $productos[$i]['precio'] ?></b> <span class="editContent">La caja</span></p>
 
       </div><!-- /.top -->

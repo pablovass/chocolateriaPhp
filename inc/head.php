@@ -35,9 +35,9 @@
               </div>
               <div id="navbar-collapse-02" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                 <li class="active propClone" ><a href="index.php?page=1">Inicio</a></li>
-                  <li class="propClone"  name="productos" ><a href="index.php?page=2">Productos</a></li>
-                  <li class="propClone"><a href="index.php?page=3">Contacto</a></li>
+                 <li class="active propClone" ><a href="../index.php?page=1">Inicio</a></li>
+                  <li class="propClone"  name="productos" ><a href="../index.php?page=2">Productos</a></li>
+                  <li class="propClone"><a href="../index.php?page=3">Contacto</a></li>
                 </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -45,7 +45,7 @@
              <ul class="dropdown-menu">
                <li><a href="<?php echo isset($_SESSION['email'])?'page/controlPane.php':'index.php?page=4' ?>">Entrar <span class="fa fa-lock"></span></a></li>
 
-               <li><a href="index.php?page=5">Registrarte</a></li>
+               <li><a href="../index.php?page=5">Registrarte</a></li>
             </ul>
            </li>
          </ul>
@@ -69,7 +69,7 @@
      $paginado= (isset($_GET['page'])) ? $_GET['page'] : '';
    switch ($paginado) {
                  case 1:
-                   include('../index.php');
+                   include('p/home.php');
                    break;
                    case 2:
                      include('p/list_products.php');
