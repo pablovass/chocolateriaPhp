@@ -56,27 +56,17 @@ $paginado= (isset($_GET['detalle'])) ? $_GET['detalle'] :'';
                                     
                                  <!---->   
                                  <?php 
-
-
-                                  for ($i=0; $i <3 ; $i++) { 
-                                 	
-                                 		                                 		
+                                    for ($i=0; $i <3 ; $i++) { 
                                  	?>
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="blog-post wow fadeInUp" data-wow-delay="0.6s">
                                         <div class="post-img">
                                             <img class="img-responsive" src="../img/product/<?php echo $productos[$i]['img_name'] ?>" style=" width: 400px; height: 255px;" alt="image">
-                                            <div class="date text-center"><span>15</span><br>Dec</div>
-                                            <ul class="list-inline post-info">
-                                                <li><i class="lnr lnr-eye"></i> 325</li>
-                                                <li><i class="lnr lnr-bubble"></i> 74</li>
-                                                <li class="post-tag text-uppercase"><?php echo $productos[$i]['categoria'] ?></li>
-                                            </ul>
+                                            
                                         </div>    
                                         <div class="blog-details">
-                                            <h4 class="media-heading">Lorem Ipsum adalah contoh digun akan didal indust</h4>
-                                            <p>Lorem Ipsum adalah text contoh digun akan didalam industri pence taka types etting 
-                                            adalah text contoh.</p>
+                                            <h4 class="media-heading"><?php echo $productos[$i]['nombre']; ?></h4>
+                                            <p><?php echo '$'. "<b>".$productos[$i]['precio']."</b>"." ".$productos[$i]['descripcion_corta']." ". "<em>".$productos[$i]['categoria']."</em>"; ?></p>
                                              <ul class="list-inline text-capitalize">
                                                 <li>by John Doe</li>
                                                 <li class="pull-right">Mobile.Computer</li>
