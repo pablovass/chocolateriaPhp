@@ -1,4 +1,8 @@
+<?php 
 
+include('../db/productos.php');
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,7 +86,7 @@
       <ul class="nav navbar-nav">
         <li><a href="panel.php?page=1">perfil</a></li>
         <li><a href="panel.php?page=2">Age</a></li>
-        <li><a href="panel.php?page=3">Gender</a></li>
+        <li><a data-toggle="collapse" data-target="#demo1">listar productos</a></li>
         <li><a data-toggle="collapse" data-target="#demo" >subir producto</a></li>
       </ul>
     </div>
@@ -96,7 +100,7 @@
       <ul class="nav nav-pills nav-stacked">
         <li><a href="panel.php?page=1">boton</a></li>
         <li><a href="panel.php?page=2">Age</a></li>
-        <li><a href="panel.php?page=3">Gender</a></li>
+        <li><a data-toggle="collapse" data-target="#demo1">listar productos</a></li>
         <li><a data-toggle="collapse" data-target="#demo" >subir producto</a></li>
       </ul><br>
     </div>
@@ -111,9 +115,7 @@
                    case 2:
                      include('#');
                      break;
-                     case 3:
-                       include('#');
-                       break;
+                     
                       
                          
 
@@ -155,29 +157,40 @@
           </div>
         </div>
       </div>
+      <!---->
+      <div id="demo1" class="collapse">
       <div class="row">
-        <div class="col-sm-4">
-          <div class="well">
-            <p>Text</p> 
-            <p>Text</p> 
-            <p>Text</p> 
+        <div class="col-sm-12">
+        <!--aca va ir mi tabla -->
+
+        <div class="well">
+          <div class="table-responsive">
+          <table class="table  table-hover  table-bordered ">
+            <tr class="active">
+              <th>nombre</th>
+              <th>descripcion</th>
+              <th>precio</th>
+              <th>categoria</th>
+              <th>imagen</th>
+            </tr>
+            <?php for ($i=0; $i < count($productos); $i++) {?> 
+            
+            <tr>
+              <td><?php echo $productos[$i]['nombre'] ?></td>
+              <td><?php echo $productos[$i]['descripcion'] ?></td>
+              <td>$ <?php echo $productos[$i]['precio'] ?></td>
+              <td><?php echo $productos[$i]['categoria'] ?></td>
+              <td><img src="../img/product/<?php echo $productos[$i]['img_name'] ?>" alt="" style=" width: 50px; height: 50px;"></td>
+            </tr>
+            <?php  } ?>
+            
+          </table>
           </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="well">
-            <p>Text</p> 
-            <p>Text</p> 
-            <p>Text</p> 
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="well">
-            <p>Text</p> 
-            <p>Text</p> 
-            <p>Text</p> 
-          </div>
-        </div>
+
       </div>
+      </div>
+      </div>
+    </div>
       <!-- para subir productos-->
 
       <div class="row">

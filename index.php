@@ -82,7 +82,7 @@ los redisionamiento del registro
                    include('p/home.php');
                    break;
                    case 2:
-                     include('p/producto.php');
+                     include('p/list_products.php');
                      break;
                      case 3:
                        include('p/contacto.php');

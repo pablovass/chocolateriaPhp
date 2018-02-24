@@ -78,5 +78,7 @@ if ($uploadOk == 0) {
         echo "Lo sentimos, hubo un error al cargar su archivo.";
     }
 }
+
+        header("Location: http://localhost/chocolateriaPhp/panel/panel.php")
 ?>
 
