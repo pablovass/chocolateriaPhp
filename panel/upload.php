@@ -25,6 +25,7 @@ $page_producto=fopen('../db/productos.php', "a+");
 $new_productos="\n".' $productos[]=['."\n".
                                 '"nombre"'.'=>'."'$nombre'".','."\n".
                                 '"descripcion"'.'=>'."'$descripcion'".','."\n".
+                                '"descripcion_corta"'.'=>'."'$descripcion_corta'".','."\n".
                                 '"precio"'.'=>'."$precio".','."\n".
                                 '"categoria"'.'=>'."'$categoria'".','."\n".
                                 '"img_name"'.'=>'."'$img_name'".','."\n".

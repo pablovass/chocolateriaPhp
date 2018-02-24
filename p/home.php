@@ -1,5 +1,8 @@
 
-
+<?php 
+include("./db/productos.php");
+ 
+ ?>
 <div class="row banner">
 
   <div class="col-md-10 col-md-offset-1">
@@ -92,120 +95,54 @@
 </div><!-- /.container -->
 
 </section>
-<!-- // End Content Block 1-7 --><div class="item pricing" id="pricing_table1">
+<!-- // End Content Block 1-7 -->
+<div class="item pricing" id="pricing_table1">
  <h1  align="center"><b>Productos de Chocolatin Argentin</b></h1>
 
 <div class="container">
 
 <div class="row">
+<!--/////////////////-->
+<?php for ($i=0; $i <3; $i++) { ?>
 
-  <div class="col-md-4">
+
+<div class="col-md-4">
 
     <div class="pricing1">
 
       <div class="top">
 
-        <h2 class="editContent">Bombones Surtidos</h2>
-        <a href="<?php echo isset( $_SESSION['email'] ) ? 'index.php?page=2'  : 'index.php?page=4'; ?>"><img src="images/v000.jpg" alt=""></a>
-        <p class="price "><b class="editContent">$150</b> <span class="editContent">La caja</span></p>
+        <h2 class="editContent"><?php echo $productos[$i]['nombre'] ?></h2>
+        <a href="detalle_producto.php?detalle=<?php $productos[$i] ?>"><img src="img/product/<?php echo $productos[$i]['img_name'] ?>" alt="" style=" width: 200px; height: 200px;"></a>
+        <p class="price "><b class="editContent">$ <?php echo $productos[$i]['precio'] ?></b> <span class="editContent">La caja</span></p>
 
       </div><!-- /.top -->
 
       <div class="bottom">
 
         <div class="editContent">
-        <ul>
-          <li><b>Oferta disponible hasta 31/10/2016</b></li>
+        <ul>    
+          <li><b><?php echo $productos[$i]['descripcion_corta'] ?></b></li>
           <li>Solo compra online</li>
         </ul>
         </div><!-- /.editContent -->
-
-        <a href="<?php echo isset( $_SESSION['email'] ) ? 'index.php?page=2'  : 'index.php?page=4'; ?>" class="btn btn-lg btn-embossed btn-block btn-primary"><span class="fa fa-credit-card"></span> Buy Now</a>
-
+        <a href="./p/detalle_producto.php?detalle=<?php echo  $productos[$i]['id']  ?>" class="btn btn-lg btn-embossed btn-block btn-primary"><span class="fa fa-credit-card"></span> Buy Now</a>
       </div><!-- /.bottom -->
-
     </div><!-- /.pricing1 -->
+ </div><!-- /.col-md-4 col   "http://localhost/producto_detalle.html?id=${prod.id} -->
 
-  </div><!-- /.col-md-4 col -->
-
-  <div class="col-md-4">
-
-    <div class="pricing1">
-
-      <div class="top">
-
-        <h2 class="editContent">CubCakes</h2>
-        <a href="<?php echo isset( $_SESSION['email'] ) ? 'index.php?page=2'  : 'index.php?page=4'; ?>"><img src="images/v001.jpg" alt=""></a>
-        <p class="price"><b class="editContent">$29</b> <span class="editContent">La caja </span></p>
-
-      </div><!-- /.top -->
-
-      <div class="bottom">
-
-        <div class="editContent">
-        <ul>
-          <li><b>Oferta disponible hasta 31/10/2016</b></li>
-          <li>Solo compra online</li>
-        </ul>
-        </div><!-- /.editContent -->
-
-        <a href="<?php echo isset( $_SESSION['email'] ) ? 'index.php?page=2'  : 'index.php?page=4'; ?>" class="btn btn-lg btn-embossed btn-block btn-primary"><span class="fa fa-credit-card"></span> Comprar</a>
-
-      </div><!-- /.bottom -->
-
-    </div><!-- /.pricing1 -->
-
-  </div><!-- /.col-md-4 col -->
-
-  <div class="col-md-4">
-
-    <div class="pricing1">
-
-      <div class="top">
-
-        <h2 class="editContent">Chocos Surtidos</h2>
-        <a href=""<?php echo isset( $_SESSION['usuario'] ) ? 'index.php?page=2'  : 'index.php?page=4'; ?>""><img src="images/v002.jpg" alt=""></a>
-        <p class="price"><b class="editContent">$99</b> <span class="editContent">Comprar</span></p>
-
-      </div><!-- /.top -->
-
-      <div class="bottom">
-
-        <div class="editContent">
-        <ul>
-          <li><b>Oferta disponible hasta 31/10/2016</b></li>
-          <li>Solo compra online</li>
-        </ul>
-        </div><!-- /.editContent -->
-
-
-
-
-        <a href="<?php echo isset( $_SESSION['email'] ) ? 'index.php?page=2'  : 'index.php?page=4'; ?>" class="btn btn-lg btn-embossed btn-block btn-primary"><span class="fa fa-credit-card"></span> Comprar</a>
-
-      </div><!-- /.bottom -->
-
-    </div><!-- /.pricing1 -->
-
-  </div><!-- /.col-md-4 col -->
-
+ <?php  } ?>
+ 
 </div><!-- /.row -->
 
 </div><!-- /.container -->
 
 
 </div>
-<?php 
-if (isset($_SESSION['usuario'])) {
-    ?>
 
 <div class="footerWrapper" id="footer2">
 <a href="index.php?page=2" class="btn btn-lg btn-embossed btn-block btn-primary" style="margin-bottom: 4px;"><span class="glyphicon glyphicon-shopping-cart"></span> Ver mas Productos </a>
 </div>
 
- <?php }else{ ?>
 
-<div class="footerWrapper" id="footer2">
-<a href="index.php?page=4" class="btn btn-lg btn-embossed btn-block btn-primary" style="margin-bottom: 4px;"><span class="glyphicon glyphicon-shopping-cart"></span> Ver mas Productos </a>
-</div>
-<?php } ?>
+

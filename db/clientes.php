@@ -11,3 +11,15 @@
 "compras"=>0,
 "dinero"=>0,
 ]; 
+$usuarios[]=[
+"alias"=>'romina',
+"nombre"=>'vallesteros',
+"apellido"=>'de los montes',
+"pais"=>'Argentina',
+"email"=>'blabla@gmail.com',
+"password"=>'hombre1986',
+"user"=>true,
+"id"=>'191wasp',
+"compras"=>0,
+"dinero"=>0,
+]; 

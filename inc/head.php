@@ -1,26 +1,18 @@
-<?php
-/*
-todo variable de session 
-
-*/
-
-?>
-
 <!DOCTYPE html>
 <html>
    <head>
      <title>Inicio</title>
    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="css/flat-ui.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/style.complete.css" rel="stylesheet">
-    <link rel="icon" href="./images/logo/logo.jpg">
+    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../css/flat-ui.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/style.complete.css" rel="stylesheet">
+    <link rel="icon" href="../images/logo/logo.jpg">
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
      <!-- Include all compiled plugins (below), or include individual files as needed -->
-     <script src="bootstrap/js/bootstrap.min.js"></script>
+     <script src="../bootstrap/js/bootstrap.min.js"></script>
 
 </head>
 <body>
@@ -74,10 +66,10 @@ todo variable de session
       </header>
 <?php
 
-     $paginado= (isset($_GET['page'])) ? $_GET['page'] : 1;
+     $paginado= (isset($_GET['page'])) ? $_GET['page'] : '';
    switch ($paginado) {
                  case 1:
-                   include('p/home.php');
+                   include('../index.php');
                    break;
                    case 2:
                      include('p/list_products.php');
@@ -97,9 +89,3 @@ todo variable de session
 
 ?>
 
-
-<footer>
-    <?php include 'inc/footer.php'; ?>
-</footer>
-</body>
-</html>
