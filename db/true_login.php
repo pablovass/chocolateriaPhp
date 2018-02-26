@@ -1,5 +1,11 @@
 <?php 
+session_start();
 require("clientes.php");
+
+
+$_SESSION['user']='';
+$_SESSION['img']='';
+
 
 
 $email=isset($_POST['email'])? $_POST['email']: '';
@@ -18,8 +24,8 @@ for ($i=0; $i < count($usuarios) ; $i++) {
 		
 		$_SESSION['user']=$usuarios[$i]['alias'];
 		$_SESSION['img']=$usuarios[$i]['img_name'];
-
-		header("Location:../panel/panel.php");
+//require '('')';
+		header("Location:../index.php");
 		}
 
 //mejorarlo con la funcion header

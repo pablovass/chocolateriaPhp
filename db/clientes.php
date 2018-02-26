@@ -24,3 +24,17 @@ $usuarios[]=[
 "compras"=>0,
 "dinero"=>0,
 ]; 
+
+$usuarios[]=[
+"alias"=>'pablowasp',
+"nombre"=>'jose',
+"apellido"=>'vElvalle',
+"pais"=>'Argentina',
+"email"=>'pablovass@live.com',
+"password"=>'hombre1986',
+"img_name"=>'01.jpg',
+"user"=>true,
+"id"=>'191wasp',
+"compras"=>0,
+"dinero"=>0,
+];

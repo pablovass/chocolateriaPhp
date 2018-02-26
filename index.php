@@ -1,6 +1,7 @@
 <?php 
+
 session_start();
-require('panel/var_session.php');
+
  ?>
 <!DOCTYPE html>
 <html>
@@ -12,7 +13,7 @@ require('panel/var_session.php');
     <link href="css/flat-ui.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style.complete.css" rel="stylesheet">
-    <link rel="icon"  type="image/x-icon" href="img/logo/logo.png">
+    <link rel="icon"  type="image/x-icon" href="/img/logo/logo.png">
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
      <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -45,12 +46,12 @@ require('panel/var_session.php');
                 </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-             <a  class="dropdown-toggle" clas="" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"><?php echo isset($_SESSION['user']) ? $_SESSION['user'] :'Login';   ?><span class="caret"></span></a>
+             <a  class="dropdown-toggle" clas="" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"><?php echo isset($_SESSION['user']) ? $_SESSION['user']: 'Login' ?><span class="caret"></span></a>
              <ul class="dropdown-menu">
                <li><a href="<?php echo isset($_SESSION['user'])?'panel/panel.php':'index.php?page=4' ?>">Entrar <span class="fa fa-lock"></span></a></li>
-              <?php if (!$_SESSION['user']) { ?>               
-                <li><a href="index.php?page=5">Registrarte</a></li>
-              <?php  }?>
+                   <?php echo isset($_SESSION['user'])? '': "<li>"."<a href='index.php?page=5'>".'registrarte'."</a>"."</li>"; ?>         
+              
+              
             </ul>
            </li>
          </ul>
