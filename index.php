@@ -13,7 +13,7 @@ session_start();
     <link href="css/flat-ui.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style.complete.css" rel="stylesheet">
-    <link rel="icon"  type="image/x-icon" href="/img/logo/logo.png">
+    <link href="img/logo/logo.ico" type="image/x-icon" rel="icon" >
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
      <!-- Include all compiled plugins (below), or include individual files as needed -->
