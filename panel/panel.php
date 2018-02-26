@@ -2,7 +2,7 @@
 include('../db/productos.php');
 include('../db/clientes.php');
 //include('../db/true_login.php');
-
+session_start();
  ?>
 
 <!DOCTYPE html>
@@ -129,10 +129,8 @@ include('../db/clientes.php');
 <?php
 
 debug($_SESSION);
-debug($_SESSION['user'] );
-$e=file_get_contents($_SESSION);
-$u=json_decode($_SESSION,true);
-
+ 
+ debug($_SESSION['us']) ;
 
 
 

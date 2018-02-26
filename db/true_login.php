@@ -6,7 +6,7 @@ require("clientes.php");
 $email=isset($_POST['email'])? $_POST['email']: '';
 $password=isset($_POST['password'])? $_POST['password']: '';
 
-$user=new stdClass;
+$user_d=new stdClass;
 
 for ($i=0; $i < count($usuarios) ; $i++) { 
 	if (($usuarios[$i]['email']==$email) && ($usuarios[$i]['password']==$password)) {
@@ -16,10 +16,10 @@ for ($i=0; $i < count($usuarios) ; $i++) {
 	 	//echo $usuarios[$i]['email']."<br>";
 	 	//echo $usuarios[$i]['password']."<br";
 		
-		$user->alias= $usuarios[$i]['alias'];
-		$user->img= $usuarios[$i]['img_name'];
-		$user->user= $usuarios[$i]['user'];
-		$_SESSION['user']=$user;
+		$user_d->alias= $usuarios[$i]['alias'];
+		$user_d->img= $usuarios[$i]['img_name'];
+		$user_d->user= $usuarios[$i]['user'];
+		$_SESSION['us']=$user_d;
 
 		header("Location:../panel/panel.php");
 		}
