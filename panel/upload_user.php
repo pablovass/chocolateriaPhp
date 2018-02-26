@@ -1,42 +1,46 @@
+
+
 <?php
-header("Access-Control-Allow-Origin:*");
-header('Access-Control-Allow-Methods','GET,POST,OPTIONS');
-header('Access-Control-Allow-Headers','X-Requested-With,content-type');
 
-
+$alias=isset($_POST['alias'])? $_POST['alias']: '';
 $nombre=isset($_POST['nombre'])? $_POST['nombre']: '';
-$descripcion=isset($_POST['descripcion'])? $_POST['descripcion']: '';
-$precio=isset($_POST['precio'])? $_POST['precio']: '';
-$categoria=isset($_POST['categoria'])? $_POST['categoria']:'';
-$img_name=isset($_FILES["fileToUpload"]['name'])? $_FILES["fileToUpload"]['name']: '';
+$apellido=isset($_POST['apellido'])? $_POST['apellido']: '';
+$pais=isset($_POST['pais'])? $_POST['pais']:'';
+$email=isset($_POST['email'])? $_POST['email']: '';
+$password=isset($_POST['password'])? $_POST['password']: '';
 
-$num= rand(0,1000);
-$id=$num.$categoria;
 //echo "<br> exito";
+$num= rand(0,1000);
+$id=$num.$alias;
 
-$page_producto=fopen('../db/productos.php', "a+");
+$page_client=fopen('clientes.php', "a+");
 
-$new_productos="\n".' $productos[]=['."\n".
-                                '"nombre"'.'=>'."'$nombre'".','."\n".
-                                '"descripcion"'.'=>'."'$descripcion'".','."\n".
-                                '"descripcion_corta"'.'=>'."'$descripcion_corta'".','."\n".
-                                '"precio"'.'=>'."$precio".','."\n".
-                                '"categoria"'.'=>'."'$categoria'".','."\n".
-                                '"img_name"'.'=>'."'$img_name'".','."\n".
-                                '"cantidad"'.'=>'."100".','."\n".
-                                '"id"'.'=>'."'$id'".','."\n".
-                                '"cantidad"'.'=>'.'100'.','."\n"
-                 
-                                .']; ';
+$micliente="\n".' $usuarios[]=['."\n".
+								'"alias"'.'=>'."'$alias'".','."\n".
+								'"nombre"'.'=>'."'$nombre'".','."\n".
+								'"apellido"'.'=>'."'$apellido'".','."\n".
+								'"pais"'.'=>'."'$pais'".','."\n".
+								'"email"'.'=>'."'$email'".','."\n".
+								'"password"'.'=>'."'$password'".','."\n".
+				                '"user"'.'=>'.'true'.','."\n".
+				                '"id"'.'=>'."'$id'".','."\n".
+				                '"compras"'.'=>'.'0'.','."\n".
+				                '"dinero"'.'=>'.'0'.','."\n"
 
-fwrite($page_producto,$new_productos);
+								.']; ';
 
-fclose($page_producto);
+fwrite($page_client,$micliente);
+
+fclose($page_client);
+
+
+
+header("Location: http://localhost/chocolateriaPhp/index.php?page=4")
 
 
 
 /////////
-$target_dir = '../img/product/';
+$target_dir = '../img/Avatar/';
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
