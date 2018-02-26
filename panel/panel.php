@@ -52,7 +52,7 @@ session_start();
                 </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                <a class="dropdown-toggle" clas="" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"> <?php echo isset($_SESSION['user'])  ?> <span><img src="../img/avatar/mario.png" class="img-rounded" alt="Cinque Terre" width="20" height="20"></span></a>
+                <a class="dropdown-toggle" clas="" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"> <?php echo $_SESSION['user']  ?> <span><img src="../img/avatar/mario.png" class="img-rounded" alt="Cinque Terre" width="20" height="20"></span></a>
                 </li>
               </ul>
              </div>
