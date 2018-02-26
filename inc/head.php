@@ -1,5 +1,6 @@
 <?php 
 session_start();
+require('../panel/var_session.php');
 
  ?>
 <!DOCTYPE html>

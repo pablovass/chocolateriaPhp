@@ -3,20 +3,16 @@
 include("./db/productos.php");
  
  ?>
+
 <div class="row banner">
-
-  <div class="col-md-10 col-md-offset-1">
-
-
-    <div id="myCarousel" class="carousel carousel1 slide margin-top-80 margin-bottom-80"  data-ride="carousel">
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
+ <div class="col-md-10 col-md-offset-1">
+  <div id="myCarousel" class="carousel carousel1 slide margin-top-80 margin-bottom-80"  data-ride="carousel">
+    <div class="carousel-inner">
     <div class="item active text-center">
-                      <h1 class="editContent">Ideales para estas fiestas !! </h1>
-
-        <p class="lead editContent">
+      <h1 class="editContent">Ideales para estas fiestas !! </h1>
+         <p class="lead editContent">
           Bocaditos de coco !!
-        </p>
+         </p>
         <a href=""><img src="img/slide/01.png" alt=""></a>
         <p class="text-center">
           <a href="#" class="btn btn-default btn-embossed btn-wide"><span class="glyphicon glyphicon-shopping-cart"></span> &nbsp;Agregalo a tu carrito </a>
@@ -50,17 +46,11 @@ include("./db/productos.php");
     <li data-target="#myCarousel" data-slide-to="2"></li>
   </ol>
   </div>
-
-
-
   </div>
-
-</div><!-- /.row -->
-
-</div><!-- /.container -->
-
-</div><!-- /.wrapper -->
-</header>
+  </div><!-- /.row -->
+  </div><!-- /.container -->
+  </div><!-- /.wrapper -->
+  </header>
 <!-- /.item --><!-- Start Content Block 1-7 -->
 <section id="content-1-7" class="content-1-7 content-block">
 

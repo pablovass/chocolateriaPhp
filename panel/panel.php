@@ -1,14 +1,29 @@
 <?php 
 include('../db/productos.php');
 include('../db/clientes.php');
-//include('../db/true_login.php');
 session_start();
  ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
 
-<?php include('../inc/head.php'); ?>
+   <head>
+     <title>Inicio</title>
+   <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../css/flat-ui.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/style.complete.css" rel="stylesheet">
+    <link rel="icon"  type="image/x-icon" href="../img/logo/logo.png">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+     <!-- Include all compiled plugins (below), or include individual files as needed -->
+     <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+
     
 <body>
   <header class="item header margin-top-0 padding-bottom-0" id="header6">
@@ -34,7 +49,7 @@ session_start();
                 </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                <a class="dropdown-toggle" clas="" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"> Usuario <span><img src="../img/avatar/mario.png" class="img-rounded" alt="Cinque Terre" width="20" height="20"></span></a>
+                <a class="dropdown-toggle" clas="" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"> <?php echo $_SESSION['user'] ?> <span><img src="../img/avatar/mario.png" class="img-rounded" alt="Cinque Terre" width="20" height="20"></span></a>
                 </li>
               </ul>
              </div>
@@ -128,14 +143,9 @@ session_start();
 </div>
 <?php
 
-debug($_SESSION);
- 
- debug($_SESSION['us']) ;
+//echo $_SESSION['user'];
 
-
-
-//echo $user->alias;
-
+//echo $_SESSION['img'];
 ?>
 <footer>
     <?php include '../inc/footer.php'; ?>

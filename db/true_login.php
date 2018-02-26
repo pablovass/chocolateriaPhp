@@ -1,5 +1,4 @@
 <?php 
-session_start();
 require("clientes.php");
 
 
@@ -16,10 +15,9 @@ for ($i=0; $i < count($usuarios) ; $i++) {
 	 	//echo $usuarios[$i]['email']."<br>";
 	 	//echo $usuarios[$i]['password']."<br";
 		
-		$user_d->alias= $usuarios[$i]['alias'];
-		$user_d->img= $usuarios[$i]['img_name'];
-		$user_d->user= $usuarios[$i]['user'];
-		$_SESSION['us']=$user_d;
+		
+		$_SESSION['user']=$usuarios[$i]['alias'];
+		$_SESSION['img']=$usuarios[$i]['img_name'];
 
 		header("Location:../panel/panel.php");
 		}
