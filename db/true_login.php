@@ -3,8 +3,19 @@ session_start();
 require("clientes.php");
 
 
-$_SESSION['user']='';
-$_SESSION['img']='';
+
+$_SESSION['alias']='';
+$_SESSION['nombre']='';
+$_SESSION['apellido']='';
+$_SESSION['pais']='';
+$_SESSION['email']='';
+$_SESSION['password']='';
+$_SESSION['img_name']='';
+$_SESSION['tipo_user']='';
+$_SESSION['id']='';
+$_SESSION['comṕras']='';
+$_SESSION['dinero']='';
+
 
 
 
@@ -15,16 +26,19 @@ $user_d=new stdClass;
 
 for ($i=0; $i < count($usuarios) ; $i++) { 
 	if (($usuarios[$i]['email']==$email) && ($usuarios[$i]['password']==$password)) {
-		//echo $usuarios[$i]['alias']."<br>";
-	 	//echo $usuarios[$i]['nombre']."<br>";
-		//echo $usuarios[$i]['apellido']."<br>";
-	 	//echo $usuarios[$i]['email']."<br>";
-	 	//echo $usuarios[$i]['password']."<br";
 		
-		
-		$_SESSION['user']=$usuarios[$i]['alias'];
+		$_SESSION['alias']=$usuarios[$i]['alias'];
+		$_SESSION['nombre']=$usuarios[$i]['nombre'];;
+		$_SESSION['apellido']=$usuarios[$i]['apellido'];;
+		$_SESSION['pais']=$usuarios[$i]['pais'];;
+		$_SESSION['email']=$usuarios[$i]['email'];;
+		$_SESSION['password']=$usuarios[$i]['password'];;
 		$_SESSION['img']=$usuarios[$i]['img_name'];
-//require '('')';
+		$_SESSION['tipo_user']=$usuarios[$i]['tipo_user'];;
+		$_SESSION['id']=$usuarios[$i]['id'];;
+		$_SESSION['comṕras']=$usuarios[$i]['compras'];;
+		$_SESSION['dinero']=$usuarios[$i]['dinero'];;
+
 		header("Location:../index.php");
 		}
 

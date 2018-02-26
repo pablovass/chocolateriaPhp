@@ -21,7 +21,7 @@ $micliente="\n".' $usuarios[]=['."\n".
 								'"pais"'.'=>'."'$pais'".','."\n".
 								'"email"'.'=>'."'$email'".','."\n".
 								'"password"'.'=>'."'$password'".','."\n".
-				                '"user"'.'=>'.'true'.','."\n".
+				                '"tipo_user"'.'=>'.'true'.','."\n".
 				                '"id"'.'=>'."'$id'".','."\n".
 				                '"compras"'.'=>'.'0'.','."\n".
 				                '"dinero"'.'=>'.'0'.','."\n"

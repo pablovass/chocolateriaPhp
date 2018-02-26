@@ -1,7 +1,7 @@
 <?php 
 
 //include('../db/productos.php');
-//include('../db/clientes.php');
+include('../db/clientes.php');
 //include('../db/var_session.php');
 
 session_start();
