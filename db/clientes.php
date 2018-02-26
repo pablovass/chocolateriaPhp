@@ -6,6 +6,7 @@
 "pais"=>'Argentina',
 "email"=>'una_simple_vida@live.com',
 "password"=>'hombre1986',
+"img_name"=>'01.jpg',
 "user"=>true,
 "id"=>'191wasp',
 "compras"=>0,

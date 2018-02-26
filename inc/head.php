@@ -1,3 +1,7 @@
+<?php 
+session_start();
+
+ ?>
 <!DOCTYPE html>
 <html>
    <head>
@@ -15,3 +19,10 @@
      <script src="../bootstrap/js/bootstrap.min.js"></script>
 
 </head>
+<?php 
+
+function debug($value){
+  echo'<pre>';
+  var_dump($value);
+  echo'</pre>';
+} ?>

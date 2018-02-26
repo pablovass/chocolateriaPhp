@@ -1,7 +1,8 @@
 <?php 
-
 include('../db/productos.php');
 include('../db/clientes.php');
+//include('../db/true_login.php');
+
  ?>
 
 <!DOCTYPE html>
@@ -125,6 +126,19 @@ include('../db/clientes.php');
 </div>
 </div>
 </div>
+<?php
+
+debug($_SESSION);
+debug($_SESSION['user'] );
+$e=file_get_contents($_SESSION);
+$u=json_decode($_SESSION,true);
+
+
+
+
+//echo $user->alias;
+
+?>
 <footer>
     <?php include '../inc/footer.php'; ?>
 </footer>
