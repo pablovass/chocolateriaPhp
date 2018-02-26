@@ -1,8 +1,5 @@
 <?php
-/*
-todo variable de session 
 
-*/
 
 ?>
 
