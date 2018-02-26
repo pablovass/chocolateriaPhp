@@ -44,7 +44,7 @@ include('../db/clientes.php');
                 </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                <a class="dropdown-toggle" clas="" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"> Usuario<span class="caret"></span></a>
+                <a class="dropdown-toggle" clas="" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"> Usuario <span><img src="../img/avatar/mario.png" class="img-rounded" alt="Cinque Terre" width="20" height="20"></span></a>
                 </li>
               </ul>
              </div>
