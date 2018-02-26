@@ -52,8 +52,18 @@ session_start();
                 </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                <a class="dropdown-toggle" clas="" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"> <?php echo $_SESSION['user']  ?> <span><img src="../img/avatar/mario.png" class="img-rounded" alt="Cinque Terre" width="20" height="20"></span></a>
-                </li>
+             <a  class="dropdown-toggle" clas="" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"><?php echo isset($_SESSION['user']) ? $_SESSION['user']: 'Login' ?>
+              <?php $img= $_SESSION['img'];
+                    echo isset($_SESSION['img']) ? "<span>"."<img src=".'../img/avatar/'."$img"." class='img-rounded' alt='user' width='20' height='20'></span>":''; ?>
+             <span class="caret"></span>
+             </a>
+             <ul class="dropdown-menu">
+               <li><a href="<?php echo isset($_SESSION['user'])?'panel/panel.php':'index.php?page=4' ?>">cerrar sesion <span class="fa fa-lock"></span></a></li>
+                   <?php echo isset($_SESSION['user'])? '': "<li>"."<a href='index.php?page=5'>".'registrarte'."</a>"."</li>"; ?>         
+              
+              
+            </ul>
+           </li>
               </ul>
              </div>
             </div>
