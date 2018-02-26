@@ -2,24 +2,13 @@
 
 include('../db/productos.php');
 include('../db/clientes.php');
-
  ?>
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="../css/flat-ui.css" rel="stylesheet">
-    <link href="../css/style.css" rel="stylesheet">
-    <link href="../css/style.complete.css" rel="stylesheet">
-    <link rel="icon" href="../images/logo/logo.jpg">
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-     <!-- Include all compiled plugins (below), or include individual files as needed -->
-     <script src="../bootstrap/js/bootstrap.min.js"></script>
 
-</head>
+<?php include('../inc/head.php'); ?>
+    
 <body>
   <header class="item header margin-top-0 padding-bottom-0" id="header6">
       <div class="wrapper">
@@ -76,12 +65,12 @@ include('../db/clientes.php');
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
 
-        <li><a href="panel.php?page=1">panel</a></li>
-        <li><a href="panel.php?page=2">tu perfil</a></li>
-        <li><a href="panel.php?page=3">Historial de compras</a></li>
-        <li><a href="panel.php?page=4">listar productos</a></li>
-        <li><a href="panel.php?page=5" >subir producto</a></li>
-        <li><a href="panel.php?page=6" >ver clientes</a></li>
+        <li><a href="panel.php?page-user=1">panel</a></li>
+        <li><a href="panel.php?page-user=2">tu perfil</a></li>
+        <li><a href="panel.php?page-user=3">Historial de compras</a></li>
+        <li><a href="panel.php?page-user=4">listar productos</a></li>
+        <li><a href="panel.php?page-user=5" >subir producto</a></li>
+        <li><a href="panel.php?page-user=6" >ver clientes</a></li>
       </ul>
     </div>
   </div>
@@ -92,18 +81,18 @@ include('../db/clientes.php');
     <div class="col-sm-2 sidenav hidden-xs">
       <h2>UsuarioName</h2>
       <ul class="nav nav-pills nav-stacked">
-        <li><a href="panel.php?page=1">panel</a></li>
-        <li><a href="panel.php?page=2">tu perfil</a></li>
-        <li><a href="panel.php?page=3">Historial de compras</a></li>
-        <li><a href="panel.php?page=4">listar productos</a></li>
-        <li><a href="panel.php?page=5" >subir producto</a></li>
-        <li><a href="panel.php?page=6" >ver clientes</a></li>
+        <li><a href="panel.php?page-user=1">panel</a></li>
+        <li><a href="panel.php?page-user=2">tu perfil</a></li>
+        <li><a href="panel.php?page-user=3">Historial de compras</a></li>
+        <li><a href="panel.php?page-user=4">listar productos</a></li>
+        <li><a href="panel.php?page-user=5" >subir producto</a></li>
+        <li><a href="panel.php?page-user=6" >ver clientes</a></li>
       </ul><br>
     </div>
     <?php 
 
 
-     $paginado= (isset($_GET['page'])) ? $_GET['page'] :1;
+     $paginado= (isset($_GET['page-user'])) ? $_GET['page-user'] :1;
    switch ($paginado) {
                  case 1:
                    include('home_panel.php');

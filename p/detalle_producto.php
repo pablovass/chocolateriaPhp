@@ -1,6 +1,7 @@
 <?php 
 include('../db/productos.php');
 include('../inc/head.php');
+include('../inc/header.php');
 
 $paginado= (isset($_GET['detalle'])) ? $_GET['detalle'] :'';
 

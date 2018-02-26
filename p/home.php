@@ -17,7 +17,7 @@ include("./db/productos.php");
         <p class="lead editContent">
           Bocaditos de coco !!
         </p>
-        <a href=""><img src="images/slide/01.png" alt=""></a>
+        <a href=""><img src="img/slide/01.png" alt=""></a>
         <p class="text-center">
           <a href="#" class="btn btn-default btn-embossed btn-wide"><span class="glyphicon glyphicon-shopping-cart"></span> &nbsp;Agregalo a tu carrito </a>
         </p>
@@ -27,7 +27,7 @@ include("./db/productos.php");
         <p class="lead editContent">
           ponelos en tu mesa dulce en estas fiestas !!
         </p>
-        <a href=""><img src="images/slide/02.png" alt=""></a>
+        <a href=""><img src="img/slide/02.png" alt=""></a>
         <p class="text-center">
           <a href="#" class="btn btn-info btn-embossed btn-wide"><span class="glyphicon glyphicon-shopping-cart"></span> &nbsp;Elegi los sabores </a>
         </p>
@@ -37,7 +37,7 @@ include("./db/productos.php");
         <p class="lead editContent">
           Frutillas con chocolates. Ideales para el postre!!
         </p>
-        <a href=""><img src="images/slide/03.png" alt=""></a>
+        <a href=""><img src="img/slide/03.png" alt=""></a>
         <p class="text-center">
           <a href="#" class="btn btn-primary btn-embossed btn-wide"><span class="glyphicon glyphicon-shopping-cart"></span>  &nbsp;Encargalas ya</a>
         </p>
@@ -68,27 +68,27 @@ include("./db/productos.php");
 
 <div class="row">
 <div class="col-md-2 col-sm-4 col-xs-6">
-<img alt="Choco Logo" src="images/marcasCho/marca01.jpg">
+<img alt="Choco Logo" src="img/marcasCho/marca01.jpg">
 </div>
 
 <div class="col-md-2 col-sm-4 col-xs-6">
-<img alt="Choco Logo" src="images/marcasCho/marca02.png">
+<img alt="Choco Logo" src="img/marcasCho/marca02.png">
 </div>
 
 <div class="col-md-2 col-sm-4 col-xs-6">
-<img alt="Choco Logo" src="images/marcasCho/marca03.png">
+<img alt="Choco Logo" src="img/marcasCho/marca03.png">
 </div>
 
 <div class="col-md-2 col-sm-4 col-xs-6">
-<img alt="Choco Logo" src="images/marcasCho/marca04.png">
+<img alt="Choco Logo" src="img/marcasCho/marca04.png">
 </div>
 
 <div class="col-md-2 col-sm-4 col-xs-6">
-<img alt="Choco Logo" src="images/marcasCho/marca05.png">
+<img alt="Choco Logo" src="img/marcasCho/marca05.png">
 </div>
 
 <div class="col-md-2 col-sm-4 col-xs-6">
-<img alt="Choco Logo" src="images/marcasCho/marca06.png">
+<img alt="Choco Logo" src="img/marcasCho/marca06.png">
 </div>
 </div><!--end of row-->
 

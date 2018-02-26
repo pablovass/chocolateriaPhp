@@ -1,31 +1,7 @@
-<?php
-/*
-todo variable de session 
-
-*/
-
-?>
-
-<!DOCTYPE html>
-<html>
-   <head>
-     <title>Inicio</title>
-   <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-    <link href="css/flat-ui.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/style.complete.css" rel="stylesheet">
-    <link rel="icon"  type="image/x-icon" href="img/logo/logo.png">
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-     <!-- Include all compiled plugins (below), or include individual files as needed -->
-     <script src="bootstrap/js/bootstrap.min.js"></script>
-
-</head>
-<body>
+  <body>
 
     <div id="page" class="page">
+
     <header class="item header margin-top-0 padding-bottom-0" id="header6">
       <div class="wrapper">
 
@@ -43,9 +19,9 @@ todo variable de session
               </div>
               <div id="navbar-collapse-02" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                 <li class="active propClone" ><a href="index.php?page=1">Inicio</a></li>
-                  <li class="propClone"  name="productos" ><a href="index.php?page=2">Productos</a></li>
-                  <li class="propClone"><a href="index.php?page=3">Contacto</a></li>
+                 <li class="active propClone" ><a href="../index.php?page=1">Inicio</a></li>
+                  <li class="propClone"  name="productos" ><a href="../index.php?page=2">Productos</a></li>
+                  <li class="propClone"><a href="../index.php?page=3">Contacto</a></li>
                 </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
@@ -53,7 +29,7 @@ todo variable de session
              <ul class="dropdown-menu">
                <li><a href="<?php echo isset($_SESSION['email'])?'page/controlPane.php':'index.php?page=4' ?>">Entrar <span class="fa fa-lock"></span></a></li>
 
-               <li><a href="index.php?page=5">Registrarte</a></li>
+               <li><a href="../index.php?page=5">Registrarte</a></li>
             </ul>
            </li>
          </ul>
@@ -74,7 +50,7 @@ todo variable de session
       </header>
 <?php
 
-     $paginado= (isset($_GET['page'])) ? $_GET['page'] : 1;
+     $paginado= (isset($_GET['page'])) ? $_GET['page'] : '';
    switch ($paginado) {
                  case 1:
                    include('p/home.php');
@@ -97,9 +73,3 @@ todo variable de session
 
 ?>
 
-
-<footer>
-    <?php include 'inc/footer.php'; ?>
-</footer>
-</body>
-</html>
