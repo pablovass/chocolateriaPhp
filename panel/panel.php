@@ -52,14 +52,14 @@ session_start();
                 </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-             <a  class="dropdown-toggle" clas="" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"><?php echo isset($_SESSION['user']) ? $_SESSION['user']: 'Login' ?>
+             <a  class="dropdown-toggle" clas="" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"><?php echo isset($_SESSION['alias']) ? $_SESSION['alias']: 'Login' ?>
               <?php $img= $_SESSION['img'];
                     echo isset($_SESSION['img']) ? "<span>"."<img src=".'../img/avatar/'."$img"." class='img-rounded' alt='user' width='20' height='20'></span>":''; ?>
              <span class="caret"></span>
              </a>
              <ul class="dropdown-menu">
-               <li><a href="<?php echo isset($_SESSION['user'])?'panel/panel.php':'index.php?page=4' ?>">cerrar sesion <span class="fa fa-lock"></span></a></li>
-                   <?php echo isset($_SESSION['user'])? '': "<li>"."<a href='index.php?page=5'>".'registrarte'."</a>"."</li>"; ?>         
+               <li><a href="<?php echo isset($_SESSION['alias'])?'panel/panel.php':'index.php?page=4' ?>">cerrar sesion <span class="fa fa-lock"></span></a></li>
+                   <?php echo isset($_SESSION['alias'])? '': "<li>"."<a href='index.php?page=5'>".'registrarte'."</a>"."</li>"; ?>         
               
               
             </ul>
@@ -89,7 +89,7 @@ session_start();
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
-      <a class="navbar-brand" href="#">UsuarioName </a>
+      <a class="navbar-brand" href="#"><?php echo isset($_SESSION['alias']) ?></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
@@ -97,9 +97,12 @@ session_start();
         <li><a href="panel.php?page-user=1">panel</a></li>
         <li><a href="panel.php?page-user=2">tu perfil</a></li>
         <li><a href="panel.php?page-user=3">Historial de compras</a></li>
+        <?php if ($_SESSION['tipo_user']==false) { ?>
         <li><a href="panel.php?page-user=4">listar productos</a></li>
         <li><a href="panel.php?page-user=5" >subir producto</a></li>
         <li><a href="panel.php?page-user=6" >ver clientes</a></li>
+      
+        <?php } ?>
       </ul>
     </div>
   </div>
@@ -108,14 +111,17 @@ session_start();
 <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-2 sidenav hidden-xs">
-      <h2>UsuarioName</h2>
+      <h2><?php echo $_SESSION['alias']; ?></h2>
       <ul class="nav nav-pills nav-stacked">
         <li><a href="panel.php?page-user=1">panel</a></li>
         <li><a href="panel.php?page-user=2">tu perfil</a></li>
         <li><a href="panel.php?page-user=3">Historial de compras</a></li>
+      <?php if ($_SESSION['tipo_user']==false) { ?>
         <li><a href="panel.php?page-user=4">listar productos</a></li>
         <li><a href="panel.php?page-user=5" >subir producto</a></li>
         <li><a href="panel.php?page-user=6" >ver clientes</a></li>
+      
+        <?php } ?>
       </ul><br>
     </div>
     <?php 

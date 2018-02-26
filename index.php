@@ -46,10 +46,10 @@ session_start();
                 </ul>
               <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-             <a  class="dropdown-toggle" clas="" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"><?php echo isset($_SESSION['user']) ? $_SESSION['user']: 'Login' ?>
+             <a  class="dropdown-toggle" clas="" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"><?php echo isset($_SESSION['alias']) ? $_SESSION['alias']: 'Login' ?>
               <?php  if (isset($_SESSION['img'])) {
                  $img= $_SESSION['img'];
-                    echo isset($_SESSION['img']) ? "<span>"."<img src=".'./img/avatar/'."$img"." class='img-rounded' alt='user' width='20' height='20'></span>":''; 
+                    echo isset($_SESSION['img']) ? "<span>"."<img src=".'./img/avatar/'."$img"." class='img-rounded' alt='alias' width='20' height='20'></span>":''; 
                  }else{
                   }
               ?>
@@ -58,8 +58,8 @@ session_start();
              <span class="caret"></span>
              </a>
              <ul class="dropdown-menu">
-               <li><a href="<?php echo isset($_SESSION['user'])?'panel/panel.php':'index.php?page=4' ?>">Entrar <span class="fa fa-lock"></span></a></li>
-                   <?php echo isset($_SESSION['user'])? '': "<li>"."<a href='index.php?page=5'>".'registrarte'."</a>"."</li>"; ?>         
+               <li><a href="<?php echo isset($_SESSION['alias'])?'panel/panel.php':'index.php?page=4' ?>">Entrar <span class="fa fa-lock"></span></a></li>
+                   <?php echo isset($_SESSION['alias'])? '': "<li>"."<a href='index.php?page=5'>".'registrarte'."</a>"."</li>"; ?>         
               
               
             </ul>

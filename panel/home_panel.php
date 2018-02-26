@@ -2,32 +2,32 @@
     <div class="container">
     <div class="col-sm-9">
       <div class="well">
-        <h4>Dashboard</h4>
-        <p>Some text..</p>
+        <h4><?php echo $_SESSION['nombre'] ." ".$_SESSION['apellido']  ; ?></h4>
+        <p>Bienvenodi a tu panel de usuario </p>
       </div>
       <div class="row">
         <div class="col-sm-3">
           <div class="well">
-            <h4>Users</h4>
-            <p>1 Million</p> 
+            <h4>Mi credito</h4>
+            <p>$ <?php echo $_SESSION['dinero'] ?></p> 
           </div>
         </div>
         <div class="col-sm-3">
           <div class="well">
-            <h4>Pages</h4>
-            <p>100 Million</p> 
+            <h4>mensajes</h4>
+            <p>proximante</p> 
           </div>
         </div>
         <div class="col-sm-3">
           <div class="well">
-            <h4>Sessions</h4>
-            <p>10 Million</p> 
+            <h4>compras</h4>
+            <p> <?php echo  $_SESSION['compras']; ?></p> 
           </div>
         </div>
         <div class="col-sm-3">
           <div class="well">
-            <h4>Bounce</h4>
-            <p>30%</p> 
+            <h4>mi carrito</h4>
+            <p>proximamente</p> 
           </div>
         </div>
       </div>

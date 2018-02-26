@@ -13,7 +13,7 @@ $_SESSION['password']='';
 $_SESSION['img_name']='';
 $_SESSION['tipo_user']='';
 $_SESSION['id']='';
-$_SESSION['comṕras']='';
+$_SESSION['compras']='';
 $_SESSION['dinero']='';
 
 
@@ -28,16 +28,16 @@ for ($i=0; $i < count($usuarios) ; $i++) {
 	if (($usuarios[$i]['email']==$email) && ($usuarios[$i]['password']==$password)) {
 		
 		$_SESSION['alias']=$usuarios[$i]['alias'];
-		$_SESSION['nombre']=$usuarios[$i]['nombre'];;
-		$_SESSION['apellido']=$usuarios[$i]['apellido'];;
-		$_SESSION['pais']=$usuarios[$i]['pais'];;
-		$_SESSION['email']=$usuarios[$i]['email'];;
-		$_SESSION['password']=$usuarios[$i]['password'];;
+		$_SESSION['nombre']=$usuarios[$i]['nombre'];
+		$_SESSION['apellido']=$usuarios[$i]['apellido'];
+		$_SESSION['pais']=$usuarios[$i]['pais'];
+		$_SESSION['email']=$usuarios[$i]['email'];
+		$_SESSION['password']=$usuarios[$i]['password'];
 		$_SESSION['img']=$usuarios[$i]['img_name'];
-		$_SESSION['tipo_user']=$usuarios[$i]['tipo_user'];;
-		$_SESSION['id']=$usuarios[$i]['id'];;
-		$_SESSION['comṕras']=$usuarios[$i]['compras'];;
-		$_SESSION['dinero']=$usuarios[$i]['dinero'];;
+		$_SESSION['tipo_user']=$usuarios[$i]['tipo_user'];
+		$_SESSION['id']=$usuarios[$i]['id'];
+		$_SESSION['compras']=$usuarios[$i]['compras'];
+		$_SESSION['dinero']=$usuarios[$i]['dinero'];
 
 		header("Location:../index.php");
 		}
