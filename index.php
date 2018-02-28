@@ -47,9 +47,9 @@ session_start();
               <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
              <a  class="dropdown-toggle" clas="" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"><?php echo isset($_SESSION['alias']) ? $_SESSION['alias']: 'Login' ?>
-              <?php  if (isset($_SESSION['img'])) {
-                 $img= $_SESSION['img'];
-                    echo isset($_SESSION['img']) ? "<span>"."<img src=".'./img/avatar/'."$img"." class='img-rounded' alt='alias' width='20' height='20'></span>":''; 
+              <?php  if (isset($_SESSION['img_name'])) {
+                 $img= $_SESSION['img_name'];
+                    echo isset($_SESSION['img_name']) ? "<span>"."<img src=".'./img/avatar/'."$img"." class='img-rounded' alt='alias' width='20' height='20'></span>":''; 
                  }else{
                   }
               ?>
