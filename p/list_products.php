@@ -54,8 +54,32 @@ require_once('./db/productos.php');
                     <?php } ?>
                     <!---->
                     
+ <!-- /////////               -->
+    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+     
 
-
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">cargar credito </h4>
+        </div>
+        <div class="modal-body">
+          <p>Tu saldo actual es: $<em><?php echo $_SESSION['dinero'] ?></p>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
+            <input id="alias" type="text" class="form-control" name="alias" placeholder="ingrese cifra">
+          </div>
+        </div>
+        <div class="modal-footer">
+          <input type="button" class="btn btn-info" value="enviar">
+        </div>
+      </div>
+      
+    </div>
+  </div>
 
 
 
