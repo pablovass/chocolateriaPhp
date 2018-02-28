@@ -25,7 +25,9 @@ $paginado= (isset($_GET['detalle'])) ? $_GET['detalle'] :'';
                         <div class="col-md-5">  
                             <div class="feature-content">
                                 <h1 class="content-title"><?php echo $productos[$i]['nombre']; ?> </h1>
-                                <p><?php echo $productos[$i]['descripcion']." ". "<em>".$productos[$i]['categoria']."</em>"; ?></p>
+                                <p> <b>precio: $<?php echo $productos[$i]['precio'] ?></b></p>
+                                <p><?php echo $productos[$i]['descripcion'] ?></p>
+                                <p><b>code: <em><?php echo $productos[$i]['id'] ?></em></b></p>
                                 
                                 <div class="text-left">
                                     <a href="#" class="btn btn-info button">Comprar</a>
@@ -59,6 +61,7 @@ $paginado= (isset($_GET['detalle'])) ? $_GET['detalle'] :'';
                                  <?php 
                                     for ($i=0; $i <3 ; $i++) { 
                                  	?>
+                                    <a href="detalle_producto.php?detalle=<?php echo  $productos[$i]['id']  ?>">
                                 <div class="col-md-4 col-sm-6 col-xs-12">
                                     <div class="blog-post wow fadeInUp" data-wow-delay="0.6s">
                                         <div class="post-img">
@@ -66,15 +69,15 @@ $paginado= (isset($_GET['detalle'])) ? $_GET['detalle'] :'';
                                             
                                         </div>    
                                         <div class="blog-details">
-                                            <h4 class="media-heading"><?php echo $productos[$i]['nombre']; ?></h4>
-                                            <p><?php echo '$'. "<b>".$productos[$i]['precio']."</b>"." ".$productos[$i]['descripcion_corta']." ". "<em>".$productos[$i]['categoria']."</em>"; ?></p>
-                                             <ul class="list-inline text-capitalize">
-                                                <li>by John Doe</li>
-                                                <li class="pull-right">Mobile.Computer</li>
-                                            </ul>
+                                            <br>
+                                            <h4 class="media-heading"><?php echo $productos[$i]['nombre']; ?><p> <b>precio: $<?php echo $productos[$i]['precio'] ?></b></p></h4>
+                                            <p><?php echo $productos[$i]['descripcion_corta'];?></p>
+                                            <p><b>code: <em><?php echo $productos[$i]['id'] ?></em></b></p>
+                                             
                                         </div>
                                     </div>    
                                 </div>
+                                </a>
 								<?php   }?>
                                 <!---->    
                             </div>
