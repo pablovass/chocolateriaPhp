@@ -39,3 +39,15 @@ $usuarios[]=[
 "compras"=>0,
 "dinero"=>0,
 ];
+ $usuarios[]=[
+"alias"=>'Alex-vass',
+"nombre"=>'Alex',
+"apellido"=>'tchhe',
+"pais"=>'Ucrania',
+"email"=>'alex@live.com',
+"password"=>'123',
+"tipo_user"=>true,
+"id"=>'462Alex-vass',
+"compras"=>0,
+"dinero"=>0,
+]; 

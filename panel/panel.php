@@ -58,7 +58,7 @@ session_start();
              <span class="caret"></span>
              </a>
              <ul class="dropdown-menu">
-               <li><a href="<?php echo isset($_SESSION['alias'])?'panel/panel.php':'index.php?page=4' ?>">cerrar sesion <span class="fa fa-lock"></span></a></li>
+               <li><a href="../db/cerrar_session.php">cerrar sesion <span class="fa fa-lock"></span></a></li>
                    <?php echo isset($_SESSION['alias'])? '': "<li>"."<a href='index.php?page=5'>".'registrarte'."</a>"."</li>"; ?>         
               
               
