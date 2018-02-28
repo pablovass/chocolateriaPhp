@@ -25,9 +25,7 @@ $new_productos="\n".' $productos[]=['."\n".
                                 '"img_name"'.'=>'."'$img_name'".','."\n".
                                 '"cantidad"'.'=>'."100".','."\n".
                                 '"id"'.'=>'."'$id'".','."\n".
-                                '"cantidad"'.'=>'.'100'.','."\n"
-                 
-                                .']; ';
+                                ']; ';
 
 fwrite($page_producto,$new_productos);
 

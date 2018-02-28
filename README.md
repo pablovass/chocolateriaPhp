@@ -7,7 +7,7 @@ propiedad: http://www.pablovallejos.com
  
 resumen del proyecto
 ---------------
-trabajo echo en PHP 5 y Bootstrap para la parte de la interfaz gráfica. 
+trabajo echo en PHP 7 y Bootstrap para la parte de la interfaz gráfica. 
 
 Temática de la página. Una tienda online con panel de usuario.
 Para controlar las compras y el perfil de usuario. Además, el administrador podrá gestionar los usuarios 

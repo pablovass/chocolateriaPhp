@@ -1,6 +1,5 @@
 <?php 
 session_start();
-require('../db/var_session.php');
 
  ?>
 <!DOCTYPE html>
