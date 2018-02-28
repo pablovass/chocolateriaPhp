@@ -4,7 +4,7 @@
       <div class="col-sm-4">
 	      <div class="well">
         <button type="button" class="btn-group btn-group-justified" data-toggle="modal" data-target="#myModal"  data-toggle="popover" title="CAMBIA TU FOTO">
-        <img src="../img/avatar/mario.png" class="img-thumbnail" alt="Cinque Terre" width="304" height="236"> 
+        <img src="../img/avatar/<?php echo $_SESSION['img_name']; ?>" class="img-thumbnail" alt="foto de perfil" width="304" height="236"> 
         </button>
 
 		  </div>

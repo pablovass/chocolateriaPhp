@@ -15,7 +15,7 @@
                   <div class="well row pt-2x pb-3x bk-light">
                     <div class="col-md-8 col-md-offset-2">
                       
-                      <form action="db/new_client.php"  method="post" enctype="multipart/form-data">
+                      <form action="./db/clientes_subir.php"  method="post" enctype="multipart/form-data">
                         <label  class="text-uppercase text-sm">Alias</label>
                         <input required name="alias" type="text"  placeholder="Alias" class="form-control mb"/>
 
@@ -26,15 +26,16 @@
                         <label  class="text-uppercase text-sm">Apellido</label>
                         <input required name="apellido" type="text"  placeholder="apellido" class="form-control mb"/>
 
-                        <label  class="text-uppercase text-sm">Pais</label>
-                        <input required name="pais" type="text"  placeholder="Pais" class="form-control mb"/>
 
                         <label  class="text-uppercase text-sm">e-mail</label>
                         <input name="email" type="email"   placeholder="e-mail" class="form-control mb"/>
 
                         <label class="text-uppercase text-sm">Password</label>
                         <input  name="password" type="password"  placeholder="Password" class="form-control mb"/>
-
+                          
+                        <div class="form-group">
+                        <p>tu avatar:</p>  
+                        <input required type="file" name="img" id="img">
                       
 
                         <button class="btn btn-primary btn-block" type="submit">registrarte</button>

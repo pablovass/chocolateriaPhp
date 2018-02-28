@@ -53,8 +53,8 @@ session_start();
               <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
              <a  class="dropdown-toggle" clas="" data-toggle="dropdown"  aria-haspopup="true" aria-expanded="false"><?php echo isset($_SESSION['alias']) ? $_SESSION['alias']: 'Login' ?>
-              <?php $img= $_SESSION['img'];
-                    echo isset($_SESSION['img']) ? "<span>"."<img src=".'../img/avatar/'."$img"." class='img-rounded' alt='user' width='20' height='20'></span>":''; ?>
+              <?php $img= $_SESSION['img_name'];
+                    echo isset($_SESSION['img_name']) ? "<span>"."<img src=".'../img/avatar/'."$img"." class='img-rounded' alt='user' width='20' height='20'></span>":''; ?>
              <span class="caret"></span>
              </a>
              <ul class="dropdown-menu">
@@ -97,6 +97,7 @@ session_start();
         <li><a href="panel.php?page-user=1">panel</a></li>
         <li><a href="panel.php?page-user=2">tu perfil</a></li>
         <li><a href="panel.php?page-user=3">Historial de compras</a></li>
+       
         <?php if ($_SESSION['tipo_user']==false) { ?>
         <li><a href="panel.php?page-user=4">listar productos</a></li>
         <li><a href="panel.php?page-user=5" >subir producto</a></li>
