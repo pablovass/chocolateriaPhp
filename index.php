@@ -1,5 +1,5 @@
 <?php 
-
+require('db/clientes.php');
 session_start();
 
  ?>

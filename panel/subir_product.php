@@ -5,7 +5,7 @@
 <h1>Subir productos </h1>
     <div class="col-sm-6">
       <div class="well">
-      <form action="upload.php" method="post" enctype="multipart/form-data">
+      <form action="../db/producto_subir.php" method="post" enctype="multipart/form-data">
                <div class="form-group">
                 <label>Ingrese nombre del nuevo producto</label>
                 <input name="nombre" type="text" class="form-control" id="comment" required>

@@ -7,6 +7,7 @@ header('Access-Control-Allow-Methods','GET,POST,OPTIONS');
 header('Access-Control-Allow-Headers','X-Requested-With,content-type');
 
 
+
 $alias=isset($_POST['alias'])? $_POST['alias']: '';
 $nombre=isset($_POST['nombre'])? $_POST['nombre']: '';
 $apellido=isset($_POST['apellido'])? $_POST['apellido']: '';

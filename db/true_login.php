@@ -2,12 +2,9 @@
 session_start();
 require("clientes.php");
 
-
-
 $_SESSION['alias']='';
 $_SESSION['nombre']='';
 $_SESSION['apellido']='';
-$_SESSION['pais']='';
 $_SESSION['email']='';
 $_SESSION['password']='';
 $_SESSION['img_name']='';
@@ -15,8 +12,6 @@ $_SESSION['tipo_user']='';
 $_SESSION['id']='';
 $_SESSION['compras']='';
 $_SESSION['dinero']='';
-
-
 
 
 $email=isset($_POST['email'])? $_POST['email']: '';
@@ -30,7 +25,7 @@ for ($i=0; $i < count($usuarios) ; $i++) {
 		$_SESSION['alias']=$usuarios[$i]['alias'];
 		$_SESSION['nombre']=$usuarios[$i]['nombre'];
 		$_SESSION['apellido']=$usuarios[$i]['apellido'];
-		$_SESSION['pais']=$usuarios[$i]['pais'];
+		
 		$_SESSION['email']=$usuarios[$i]['email'];
 		$_SESSION['password']=$usuarios[$i]['password'];
 		$_SESSION['img_name']=$usuarios[$i]['img_name'];
@@ -38,6 +33,18 @@ for ($i=0; $i < count($usuarios) ; $i++) {
 		$_SESSION['id']=$usuarios[$i]['id'];
 		$_SESSION['compras']=$usuarios[$i]['compras'];
 		$_SESSION['dinero']=$usuarios[$i]['dinero'];
+
+
+		$alias =$usuarios[$i]['alias']; 
+		$nombre =$usuarios[$i]['nombre'];
+		$apellido=$usuarios[$i]['apellido'];
+		$email=$usuarios[$i]['pais'];
+		$imag_name=$usuarios[$i]['email'];
+		$id=$usuarios[$i]['id'];
+		$compras=$usuarios[$i]['compras'];
+		$dinero=$usuarios[$i]['dinero'];
+
+
 
 		header("Location:../index.php");
 		}

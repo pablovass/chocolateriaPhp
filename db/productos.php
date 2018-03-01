@@ -69,3 +69,13 @@
 "cantidad"=>100,
 "id"=>'07choco_blanco',
 ]; 
+ $productos[]=[
+"nombre"=>'davici danci ',
+"descripcion"=>'fhgdh',
+"descripcion_corta"=>'',
+"precio"=>222,
+"categoria"=>'chocolate Amargo',
+"img_name"=>'tumblr_mhi1sqKBLN1qgg4upo1_500.jpg',
+"cantidad"=>100,
+"id"=>'195chocolate Amargo',
+]; 
